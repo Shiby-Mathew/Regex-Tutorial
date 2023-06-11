@@ -37,9 +37,18 @@ Quantifiers set the limits of the string that your regex matches a range of numb
 
 ### Grouping Constructs
 
+There are multiple parts of a string with different section fulfilling different requirements. We use grouping constructs to break up these sections. Regex are generally broken up into sections using parentheses (). From the example, ([a-z0-9_.-]+),([\da-z.-]+),([a-z.]{2,6}) these are the three separate sections.
+
 ### Bracket Expressions
 
+A bracket expression is anything inside a set of sqaure brackets([]), represents a range of characters that we want to match. From the example, [a-z0-9_.-] the string that contains any combination of lowercase letters starting from 'a' to 'z', numbers from 0 to 9, an underscore or hyphen or a period. This pattern doesnot require to meet all of them, it can meet any of them in any order.
+
 ### Character Classes
+
+A character class in a regex is a set of characters, that any one of the character can occur in an input string to fullfill a match.The bracket expressions which explained before are considered as character classes.From the email example,
+
+A period(.)—Matches any character except the newline character (\n)
+(\d)—Matches any Arabic numeral digit. This class is equivalent to the bracket expression [0-9].
 
 ### The OR Operator
 
