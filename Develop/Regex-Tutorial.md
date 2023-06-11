@@ -41,7 +41,7 @@ There are multiple parts of a string with different section fulfilling different
 
 ### Bracket Expressions
 
-A bracket expression is anything inside a set of sqaure brackets([]), represents a range of characters that we want to match. From the example, [a-z0-9_.-] the string that contains any combination of lowercase letters starting from 'a' to 'z', numbers from 0 to 9, an underscore or hyphen or a period. This pattern doesnot require to meet all of them, it can meet any of them in any order.
+A bracket expression is anything inside a set of sqaure brackets([]), represents a range of characters that we want to match. From the example, [a-z0-9_.-] the string that contains any combination of lowercase letters starting from 'a' to 'z', numbers from 0 to 9, an underscore or hyphen or a period. This pattern doesnot require to meet all of them, it can meet any of them and in any order.
 
 ### Character Classes
 
@@ -50,9 +50,15 @@ A character class in a regex is a set of characters, that any one of the charact
 A period(.)—Matches any character except the newline character (\n)
 (\d)—Matches any Arabic numeral digit. This class is equivalent to the bracket expression [0-9].
 
-### The OR Operator
 
 ### Flags
+
+A regex must be wrapped in two forward slashes. The one exception to this rule is with the component known as flags. If you have any additional functionality or limits for the regex, flags are placed at the end of a regex, after the second slash. There are six optional flags that can be used, either separately or together and in any order, but these three flags are most likely used
+
+    g—Global search: the regex should be tested against all possible matches in a string.
+    i—Case-insensitive search: case should be ignored while attempting a match in a string
+    m—Multi-line search: a multi-line input string should be treated as multiple lines
+In this above example, there is no flags used
 
 ### Character Escapes
 
